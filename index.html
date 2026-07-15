@@ -165,6 +165,7 @@
     <div class="brand">keagen@portfolio:<span>~$</span></div>
     <ul>
       <li><a href="#about">about</a></li>
+      <li><a href="#how-i-build">how i build</a></li>
       <li><a href="#project">project</a></li>
       <li><a href="#internship">internship</a></li>
       <li><a href="#skills">skills</a></li>
@@ -178,16 +179,16 @@
     <div class="term-bar"><i></i><i></i><i></i></div>
     <div class="term-body">
       <span class="p">keagen@portfolio:~$</span> <span class="cmd">whoami</span>
-      <span class="out">Student · Relentless learner · Programmer · Quant research hobbyist · Systems tinkerer</span>
+      <span class="out">Student · Programmer · Quant research hobbyist · Systems tinkerer</span>
       <span class="p">keagen@portfolio:~$</span> <span class="cmd" id="typed"></span><span class="cursor"></span>
     </div>
   </div>
   <h1>Hi, I'm <em>Keagen Chan</em>.</h1>
   <p class="tagline">
-    I'm a spontaneous, flexible learner who's endlessly curious about how things work.
-    I don't box myself into one lane — I pick a problem, put my mind to it, and learn whatever
-    it demands. Lately that has meant building a Python quant research pipeline that hunts for
-    market regimes, and configuring VLANs and fibre links on a live enterprise network.
+    I like figuring out how things work — markets, networks, code. When a problem grabs me,
+    I go deep until I understand it properly. Lately that has meant building a Python system
+    that detects market regimes, and doing hands-on VLAN and fibre work on a live building
+    network during my internship.
   </p>
   <div class="chips">
     <span class="chip">Python</span>
@@ -208,24 +209,21 @@
     <div class="sec-label">// about</div>
     <h2>About me</h2>
     <p class="lead">
-      I'm currently pursuing a <strong>Higher Nitec in IT Applications Development</strong> at the
-      Institute of Technical Education (Class of 2027) — but the real constant in everything I do
-      is learning. I'm obsessed with understanding systems: markets, networks, codebases,
-      buildings. I'm happiest when I'm figuring out how one works from the inside.
+      I'm doing a <strong>Higher Nitec in IT Applications Development</strong> at ITE
+      (Class of 2027). Outside class, most of my time goes into side projects. I like
+      understanding systems from the inside — a market, a network, a codebase — and I'm
+      happiest when I'm taking one apart to see how it works.
     </p>
     <p class="lead">
-      My problem-solving starts with data. Whatever the problem, my first move is to hunt down any
-      relevant data I can get my hands on, analyze it, and let it show me what's actually going on
-      — because you can't solve what you haven't understood. That habit is why curiosity about
-      markets turned into a 39-commit regime-detection system, and why the evidence-first,
-      layer-by-layer discipline of enterprise network troubleshooting felt natural during my
-      internship at SinoVision.
+      When I hit a problem, I start with data. Get the numbers, look at them carefully, and let
+      them show me what's going on. That's how curiosity about markets grew into a full
+      regime-detection system with tests and CI, and it's the same layer-by-layer approach that
+      network troubleshooting demanded during my internship at SinoVision.
     </p>
     <p class="lead">
-      I also learn on my own schedule: Google's Machine Learning Crash Course (verified
+      I also pick up skills outside school: Google's Machine Learning Crash Course (verified
       completion, Oct 2025), web development with JavaScript / Node.js and PHP, and design tools
-      like Figma and Adobe XD. If a problem needs a skill I don't have yet, that's just the next
-      thing to learn.
+      like Figma and Adobe XD. When a project needs something I don't know yet, I go learn it.
     </p>
   </div>
 </section>
@@ -235,46 +233,45 @@
     <div class="sec-label">// how i build</div>
     <h2>AI is my collaborator — judgment is my job</h2>
     <p class="lead">
-      I'm upfront about this because directing AI well is a skill I deliberately train: the regime
-      identifier and this site were built with AI agents as collaborators. My job is everything
-      the AI can't want on its own — choosing the problem, deciding what would prove the system
-      wrong, and refusing to ship anything I can't explain. The quotes below are lifted straight
+      I'll be upfront: I built the regime identifier and this site with AI agents as
+      collaborators, and learning to direct AI well is something I practise deliberately.
+      My part is the judgment — choosing the problem, deciding what would prove the system
+      wrong, and refusing to ship anything I can't explain. The quotes below come straight
       from my own development session logs.
     </p>
 
     <div class="grid">
       <div class="card">
         <h4>"test me after every lesson"</h4>
-        <p>Before the real project, I ran a separate learning repo where I instructed the AI to
-        quiz me after every lesson and explain the heaviest lines of code — OHLCV structure, why
-        columnar storage beats rows, API rate-limit handling. The concepts had to be mine before
-        the system got built.</p>
+        <p>Before starting the real project, I ran a separate learning repo and told the AI to
+        quiz me after every lesson and explain the hardest lines of code — OHLCV structure, why
+        columnar storage beats rows, how to handle API rate limits. I wanted the concepts in my
+        own head before any system got built.</p>
       </div>
       <div class="card blue">
         <h4>"help me fully understand the project"</h4>
-        <p>I created a custom review agent, <em>Adam</em>, whose only job is to re-read the entire
+        <p>I set up a review agent, <em>Adam</em>, whose only job is to re-read the entire
         repo and regenerate <a href="https://github.com/kkikee/Market-Regime-Identifier/blob/master/UNDERSTANDING.md" target="_blank" rel="noopener">UNDERSTANDING.md</a>
-        — a plain-English map of every model, formula, and design decision, referenced back to the
-        code. My rule: nothing ships that I can't explain.</p>
+        — a plain-English map of every model, formula, and design decision, tied back to the
+        code. My rule: if I can't explain it, it doesn't ship.</p>
       </div>
       <div class="card warn">
         <h4>"how do i deny your access to that file"</h4>
-        <p>The moment live API keys entered the project, I moved secrets outside the repo, set up
-        hooks to block the AI itself from reading the key file, and ran a test to confirm it —
-        security boundaries apply to collaborators too, human or not.</p>
+        <p>Once live API keys entered the project, I moved the secrets outside the repo, set up
+        hooks so even the AI couldn't read the key file, and ran a test to confirm it worked.
+        Security boundaries apply to every collaborator, human or not.</p>
       </div>
       <div class="card purple">
         <h4>"i'm not sure the plan is relevant — help me evaluate it"</h4>
-        <p>I cross-examine my tools against each other: an architecture plan from one AI got
-        critically evaluated before any of it was adopted, and I kill agent runs that burn
-        resources without adding understanding.</p>
+        <p>I don't take one AI's word for anything. An architecture plan from one model got
+        picked apart critically before any of it was adopted, and I stop agent runs that burn
+        time without teaching me anything.</p>
       </div>
     </div>
 
     <p class="lead" style="margin-top:26px">
-      The way I see it: code that merely runs is cheap now. Judgment about what to build, what
-      would prove it wrong, and whether to believe the output is not. That's the part I bring —
-      and the part I'm applying to keep training.
+      Code that runs is cheap now. Knowing what to build, what would prove it wrong, and
+      whether to trust the output is not — and that's the part I keep working on.
     </p>
   </div>
 </section>
@@ -284,18 +281,18 @@
     <div class="sec-label">// featured project</div>
     <h2>Market Regime Identifier</h2>
     <p class="lead">
-      A Python research system that answers a deceptively simple question:
+      A Python research system built around a simple-sounding question:
       <strong>“what kind of market are we in right now — and can you trade that answer honestly?”</strong>
     </p>
     <p class="lead">
       A 4-state Gaussian Hidden Markov Model reads three daily features from index prices
-      (log return, 21-day realized volatility, 63-day trend) and discovers four recurring market
-      “moods” on its own: <code style="font-family:var(--mono);color:var(--accent)">quiet_bull</code>,
+      (log return, 21-day realized volatility, 63-day trend) and discovers four recurring
+      regimes on its own: <code style="font-family:var(--mono);color:var(--accent)">quiet_bull</code>,
       <code style="font-family:var(--mono);color:var(--accent)">volatile_bull</code>,
       <code style="font-family:var(--mono);color:var(--accent)">sideways</code>,
       <code style="font-family:var(--mono);color:var(--accent)">volatile_bear</code>.
-      Detection was the easy half. Most of the project is the machinery that checks whether the
-      labels are real and tradeable — not just pretty in hindsight.
+      Detecting them was the easy half. Most of the project is the machinery that checks whether
+      those labels are real and tradeable — not just pretty in hindsight.
     </p>
 
     <div class="grid">
@@ -308,13 +305,13 @@
         <h4>02 / no lookahead</h4>
         <p>Walk-forward validation refits the model yearly on an expanding window and labels each
         year strictly out-of-sample with causal (filtered) probabilities. Macro features are
-        point-in-time aligned with release lags so backtests never see data before it was published.</p>
+        point-in-time aligned with release lags, so backtests never see data before it was published.</p>
       </div>
       <div class="card purple">
         <h4>03 / strategy layer</h4>
         <p>Per-regime trading rules evolved with genetic programming (gplearn) on a block-bootstrap
         synthetic episode corpus, scored across many seeds on holdout Sharpe net of turnover costs —
-        reading the beats-baseline fraction, not one lucky seed.</p>
+        judged by the fraction of seeds that beat the baseline, not one lucky seed.</p>
       </div>
       <div class="card warn">
         <h4>04 / true out-of-sample</h4>
@@ -337,10 +334,10 @@
 
     <h3>What this project taught me about honest research</h3>
     <ul class="plain">
-      <li>Exploratory charts that label history with a full-history fit can see the future — the README documents this lookahead bias instead of hiding it.</li>
-      <li>Gaussian emissions understate fat tails; regime durations are geometric (right-skewed), not normal.</li>
-      <li>A strategy that “wins” on one seed means nothing; a strategy that beats always-long on every seed in <em>volatile_bear</em> means something.</li>
-      <li>The composite backtest inherits every real-world seam at once — misclassification, late transitions, warm-up gaps — and is expected to look worse than the per-regime numbers. That gap is information.</li>
+      <li>Exploratory charts that label history with a full-history fit can effectively see the future — the README documents this lookahead bias instead of hiding it.</li>
+      <li>Gaussian emissions understate fat tails, and regime durations are geometric (right-skewed), not normal.</li>
+      <li>A strategy that “wins” on one seed means nothing. A strategy that beats always-long on every seed in <em>volatile_bear</em> means something.</li>
+      <li>The composite backtest inherits every real-world seam at once — misclassification, late transitions, warm-up gaps — so it is expected to look worse than the per-regime numbers. That gap is information.</li>
     </ul>
 
     <div class="btns" style="margin-top:26px">
@@ -355,8 +352,8 @@
     <div class="sec-label">// internship</div>
     <h2>SinoVision — Project Engineer Intern</h2>
     <p class="lead">
-      I interned at SinoVision working on enterprise-scale building management and access control
-      systems across two major deployments: the <strong>smart-building network infrastructure of a
+      I interned at SinoVision, working on enterprise-scale building management and access control
+      systems across two deployments: the <strong>smart-building network infrastructure of a
       large mixed-use development</strong>, and an <strong>access control &amp; visitor management
       system (ACVAS)</strong> for a club facility.
     </p>
@@ -498,7 +495,7 @@
       </div>
     </div>
 
-    <h3>What I actually did on this network</h3>
+    <h3>What I did on this network</h3>
     <ul class="plain">
       <li>Configured and troubleshot facial recognition access scanners — tracing controllers, locating switch ports, setting Wiegand-34 protocol parameters, and syncing devices to a central NTP server so access logs and CCTV timestamps stay aligned.</li>
       <li>Worked with tagged vs untagged VLAN port configuration: trunk ports carrying multiple VLANs between switches, untagged ports for end devices like cameras and scanners that don't understand VLAN tags.</li>
@@ -521,8 +518,8 @@
       </div>
       <div class="card warn">
         <h4>performance testing</h4>
-        <p>Introduced to Apache JMeter for benchmark and stress testing: concurrent user simulation,
-        response times, CPU/memory utilization, and failure rate monitoring under load.</p>
+        <p>Got introduced to Apache JMeter for benchmark and stress testing: simulating concurrent
+        users and monitoring response times, CPU/memory utilization, and failure rates under load.</p>
       </div>
     </div>
   </div>
@@ -584,7 +581,7 @@
 
 <footer>
   <div class="wrap">
-    <p>// built by hand with plain HTML, CSS and JavaScript — no frameworks, no build step.</p>
+    <p>// plain HTML, CSS and JavaScript — no frameworks, no build step. drafted with an AI collaborator, reviewed line by line by me.</p>
   </div>
 </footer>
 
